@@ -1861,6 +1861,14 @@
     shuffle-seed "^1.1.6"
     titleize "^1.0.1"
 
+"@ovh-ux/manager-navbar@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@ovh-ux/manager-navbar/-/manager-navbar-2.1.2.tgz#5bf3a42d2d6a39b107c27236f822e94640b08a11"
+  integrity sha512-RUR8YtBlqhDh4m4aep8xekWTnoS7/Aje1JLRn01otZCGcIavmuowGcFQd6Y9kXr6hHRwsqD/7bQe4SbIO5t1Ag==
+  dependencies:
+    lodash "^4.17.15"
+    moment "^2.24.0"
+
 "@ovh-ux/ng-at-internet-ui-router-plugin@^2.0.3":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@ovh-ux/ng-at-internet-ui-router-plugin/-/ng-at-internet-ui-router-plugin-2.0.3.tgz#be33d9185ec95345d3d2dd2b8d945ae47981b778"
@@ -11792,7 +11800,7 @@ ovh-angular-user-pref@^0.3.1:
   resolved "https://registry.yarnpkg.com/ovh-angular-user-pref/-/ovh-angular-user-pref-0.3.1.tgz#07f5792513651f3262ae4879c174423649b08307"
   integrity sha1-B/V5JRNlHzJirkh5wXRCNkmwgwc=
 
-ovh-api-services@^9.26.0:
+ovh-api-services@^9.23.2, ovh-api-services@^9.26.0:
   version "9.26.0"
   resolved "https://registry.yarnpkg.com/ovh-api-services/-/ovh-api-services-9.26.0.tgz#b88059896ac0865f874b12d4657c24729e5582f1"
   integrity sha512-JBD2xleitoKj5tz2W3oH2LKLGj04hH9lmZaKmLD5Vy+f+UlrO346YVSKTe/Q+C5Bv/p6AtQdu8k8ubxWFCot5A==
@@ -11869,6 +11877,13 @@ ovh-ui-kit@^2.35.3:
   version "2.35.3"
   resolved "https://registry.yarnpkg.com/ovh-ui-kit/-/ovh-ui-kit-2.35.3.tgz#b43df15f58f97163d688e1d4962c03d612b5ee4b"
   integrity sha512-A0ikDQj+kDzongHQJ6Q1LWmDBMbGcJwcq0Udw3CgWAL5YwtCnGQHFAejlqUoFdyDId5inbKoSUwFnBks/td/mg==
+  dependencies:
+    less-plugin-remcalc "^0.1.0"
+
+ovh-ui-kit@^2.36.1:
+  version "2.36.1"
+  resolved "https://registry.yarnpkg.com/ovh-ui-kit/-/ovh-ui-kit-2.36.1.tgz#ac39276e6e2a22f27f9489cb1c171dc7802ffaed"
+  integrity sha512-OO7VSMBa1ZHYzG6kyFTZRih1ujJ2fMpvDsBz6wKvIqHaWsrFMeUKNO9JN1pCH5bDtYT8K0o7QsIuKibtFUAjjw==
   dependencies:
     less-plugin-remcalc "^0.1.0"
 
