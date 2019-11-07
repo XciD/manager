@@ -6,8 +6,11 @@ module.exports = (env = {}) => {
   const { config } = webpackConfig({
     template: './src/index.html',
     basePath: './src',
+    lessPath: [
+      './node_modules',
+    ],
     root: path.resolve(__dirname, './src'),
-  }, process.env.REGION ? Object.assign(env, { region: process.env.REGION }) : env);
+  }, env);
 
   return merge(config, {
     entry: path.resolve('./src/index.js'),
