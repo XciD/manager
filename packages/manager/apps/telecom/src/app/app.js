@@ -36,7 +36,7 @@ import ngOvhContact from '@ovh-ux/ng-ovh-contact';
 
 import uiRouter, { RejectType } from '@uirouter/angularjs';
 import TelecomAppCtrl from './app.controller';
-import carrierSip from './telecom/telephony/carrierSip';
+import telephony from './telecom/telephony';
 
 import errorPage from './error-page/error-page.module';
 import navbar from '../components/navbar';
@@ -116,7 +116,7 @@ angular.module('managerApp', [
   'ui.sortable',
   'ui.validate',
   'validation.match',
-  carrierSip,
+  telephony,
   portabilities,
 ])
 
