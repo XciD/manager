@@ -70,16 +70,4 @@ angular
     // set moment locale
     moment.locale(defaultLanguage.split('_')[0]);
   })
-  .run(/* @ngInject */ ($state) => {
-    $state.defaultErrorHandler((error) => {
-      if (error.type === RejectType.ERROR) {
-        $state.go('pci.error', {
-          detail: {
-            message: get(error.detail, 'data.message'),
-            code: has(error.detail, 'headers') ? error.detail.headers('x-ovh-queryId') : null,
-          },
-        }, { location: false });
-      }
-    });
-  })
   .run(/* @ngTranslationsInject:json ./translations */);

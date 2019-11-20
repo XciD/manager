@@ -1,0 +1,32 @@
+
+export default class PciServingNamespaceTokensController {
+  /* @ngInject */
+  constructor(
+    $q,
+    $translate,
+    CucCloudMessage,
+  ) {
+    this.$q = $q;
+    this.$translate = $translate;
+    this.CucCloudMessage = CucCloudMessage;
+  }
+
+  $onInit() {
+    this.loadMessages();
+  }
+
+  loadMessages() {
+    this.CucCloudMessage.unSubscribe('pci.projects.project.serving.namespace.tokens');
+    this.messageHandler = this.CucCloudMessage.subscribe('pci.projects.project.serving.namespace.tokens', { onMessage: () => this.refreshMessages() });
+  }
+
+  refreshMessages() {
+    this.messages = this.messageHandler.getMessages();
+  }
+
+  loadRow(row) {
+    return Object.assign(row, {
+      flattenGroups: row.groups.join(' - '),
+    });
+  }
+}
