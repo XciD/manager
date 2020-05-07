@@ -1,9 +1,7 @@
 export default /* @ngInject */ ($stateProvider) => {
   $stateProvider.state('pci.projects.project.serving.namespace.models', {
     url: '/models',
-    views: {
-      servingView: 'ovhManagerPciProjectServingNamespaceModelsComponent',
-    },
+    component: 'ovhManagerPciProjectServingNamespaceModels',
     resolve: {
       addModel: /* @ngInject */ ($state, projectId, namespaceId) => () =>
         $state.go('pci.projects.project.serving.namespace.models.add', {
@@ -44,6 +42,7 @@ export default /* @ngInject */ ($stateProvider) => {
         projectId,
         namespaceId,
       ) => OvhManagerPciServingModelsService.getAll(projectId, namespaceId),
+
       goToNamespaceModels: (
         $state,
         CucCloudMessage,
@@ -74,6 +73,15 @@ export default /* @ngInject */ ($stateProvider) => {
 
         return promise;
       },
+
+      modelDetailsLink: /* @ngInject */ ($state, projectId, namespaceId) => (
+        modelId,
+      ) =>
+        $state.href('pci.projects.project.serving.namespace.models.details', {
+          projectId,
+          namespaceId,
+          modelId,
+        }),
 
       breadcrumb: /* @ngInject */ ($translate) =>
         $translate.instant('pci_projects_project_serving_namespace_models'),

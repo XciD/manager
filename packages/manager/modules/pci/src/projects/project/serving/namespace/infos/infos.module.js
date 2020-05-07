@@ -24,6 +24,6 @@ angular
   ])
   .config(routing)
   .run(/* @ngTranslationsInject:json ./translations */)
-  .component('ovhManagerPciProjectServingNamespaceInfosComponent', component);
+  .component(moduleName, component);
 
 export default moduleName;
