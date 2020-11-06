@@ -129,6 +129,16 @@ export const MENU = [
         id: 'training',
         beta: true,
         options: {
+          state: 'pci.projects.project.ai-solutions',
+        },
+        title: 'AI Solutions',
+        regions: ['CA', 'EU'],
+        feature: 'ai-training',
+      },
+      {
+        id: 'training',
+        beta: true,
+        options: {
           state: 'pci.projects.project.training',
         },
         title: 'AI Training',
